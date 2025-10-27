@@ -150,6 +150,38 @@ pre {
   border: 1px solid rgba(0,255,255,0.2);
 }
 </style>
+  /* === Popup Styling (Glassy) === */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 10, 25, 0.9);
+  backdrop-filter: blur(15px);
+  color: #e0e0e0;
+  overflow-y: auto; /* ✅ এটি স্ক্রলিং সক্রিয় করবে */
+  padding-top: 40px; /* উপরে একটু ফাঁকা রাখার জন্য */
+}
+
+.popup-content {
+  background: rgba(15, 25, 45, 0.85);
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  text-align: left;
+  line-height: 1.8;
+  box-shadow: 0 0 25px rgba(0,255,255,0.3);
+  border: 1px solid rgba(0,255,255,0.2);
+  animation: fadeIn 0.5s ease;
+  max-height: 90vh; /* ✅ বড় হলে সীমাবদ্ধ রাখবে */
+  overflow-y: auto; /* ✅ Popup এর ভেতরেও স্ক্রল হবে */
+}
+
 </head>
 
 <body>
@@ -373,4 +405,5 @@ Win + R → cmd → netsh wlan show profile name="YourNetworkName" key=clear
 </body>
 
 </html>
+
 
